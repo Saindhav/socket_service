@@ -22,4 +22,9 @@ public class CognigyResource {
 		return botService.generateBotReply(userMessage);
 	}
 
+	@RequestMapping("/greet/{name}")
+	public String greet( @PathVariable("name") String name) {
+		return "Hello "+name+"!!";
+	}
+
 }
